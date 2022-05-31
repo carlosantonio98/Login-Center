@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --primary-color: #013243;
+    --secondary-color: #86BFD3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/Background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.log-in {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    max-width: 620px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+/* Description Container */
+.log-in__description {
+    position: relative;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+.log-in__title {
+    margin: 40px 0 8px 0;
+}
+.log-in__title--light {
+    color: #FFFFFF;
+}
+.log-in__title--dark {
+    color: #000000;
+}
+.log-in__subtitle {
+    font-size: .9rem;
+    color: var(--secondary-color);
+}
+.log-in__img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* Form Container */
+.log-in__form {
+    padding: 0 40px 40px 40px;
+}
+
+.log-in__input-container {
+    margin: 20px 0px;
+}
+.log-in__input-container > label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: .9rem;
+    font-weight: bolder;
+}
+.log-in__input {
+    width: 100%;
+    padding: 13px 10px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    outline: none;
+    transition: 300ms border ease-in-out;
+}
+.log-in__input:focus {
+    border: 1px solid var(--primary-color);
+}
+
+.log-in__check-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+.log-in__checkbox {
+    margin-right: 6px;
+}
+.log-in__btn-terms {
+    font-weight: bolder;
+    color: var(--primary-color);
+}
+
+.log-in__btn-create {
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: bolder;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+    .container {
+        display: flex;
+    }
+    .log-in {
+        grid-template-columns: 1fr;
+        border-radius: 0;
+    }
+    .log-in__description {
+        min-height: 490px;
+    }
+}
